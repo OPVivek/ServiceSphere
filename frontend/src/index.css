@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-brand-800: #1e40af;
+  --color-brand-900: #1e3a8a;
+  --color-brand-950: #172554;
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    @apply bg-slate-50 text-slate-900 antialiased selection:bg-blue-600 selection:text-white min-h-screen;
+  }
+
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Status & Priority Badge Utilities */
+.badge-open {
+  @apply bg-blue-50 text-blue-700 border border-blue-200/80 font-semibold px-2.5 py-0.5 rounded-full text-xs inline-flex items-center gap-1.5;
+}
+
+.badge-in-progress {
+  @apply bg-amber-50 text-amber-700 border border-amber-200/80 font-semibold px-2.5 py-0.5 rounded-full text-xs inline-flex items-center gap-1.5;
+}
+
+.badge-waiting {
+  @apply bg-purple-50 text-purple-700 border border-purple-200/80 font-semibold px-2.5 py-0.5 rounded-full text-xs inline-flex items-center gap-1.5;
+}
+
+.badge-resolved {
+  @apply bg-emerald-50 text-emerald-700 border border-emerald-200/80 font-semibold px-2.5 py-0.5 rounded-full text-xs inline-flex items-center gap-1.5;
+}
+
+.badge-closed {
+  @apply bg-slate-100 text-slate-700 border border-slate-300 font-semibold px-2.5 py-0.5 rounded-full text-xs inline-flex items-center gap-1.5;
+}
+
+.badge-critical {
+  @apply bg-rose-50 text-rose-700 border border-rose-200 font-bold px-2 py-0.5 rounded text-xs uppercase tracking-wide;
+}
+
+.badge-high {
+  @apply bg-orange-50 text-orange-700 border border-orange-200 font-semibold px-2 py-0.5 rounded text-xs uppercase tracking-wide;
+}
+
+.badge-medium {
+  @apply bg-sky-50 text-sky-700 border border-sky-200 font-semibold px-2 py-0.5 rounded text-xs uppercase tracking-wide;
+}
+
+.badge-low {
+  @apply bg-slate-100 text-slate-600 border border-slate-200 font-semibold px-2 py-0.5 rounded text-xs uppercase tracking-wide;
+}
